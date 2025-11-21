@@ -91,7 +91,7 @@ def load_sample_data():
     """
     data = {
         'text': [
-            # Engleski - duži paragrafi
+            # Engleski
             "Language identification is a common preprocessing step in multilingual NLP pipelines. "
             "This paragraph discusses how short samples may be ambiguous, so longer context often helps models disambiguate closely related languages by providing syntactic and lexical cues. "
             "The goal of the dataset here is to provide richer examples that include varied vocabulary, punctuation and multiple sentences.",
@@ -107,7 +107,7 @@ def load_sample_data():
 
             "Finally, longer English passages can show formal and informal styles, which further challenges classifiers but helps them learn more robust representations when present in the training set.",
 
-            # Srpski - duži paragrafi
+            # Srpski
             "Detekcija jezika u stvarnim aplikacijama često zahteva analizu nekoliko rečenica kako bi se uočile karakteristične gramatičke strukture i reči. "
             "Ovaj duži primer sadrži više rečenica koje opisuju svakodnevne scenarije, tehničke teme i opšte komentare kako bi model dobio bogatiji kontekst. "
             "Uključene su uobičajene fraze, skraćenice i imena koja se pojavljuju u pisanom jeziku.",
@@ -122,7 +122,7 @@ def load_sample_data():
 
             "Na kraju, primeri uključuju deskriptivne rečenice o nauci podataka i programskim alatima, što omogućava modelima da nauče i tehničku leksiku.",
 
-            # Nemački - duži paragrafi
+            # Nemački
             "Spracherkennung ist ein wichtiger Schritt in vielen mehrsprachigen Anwendungen, besonders wenn Texte aus unterschiedlichen Domänen stammen. "
             "Längere Abschnitte ermöglichen es Modellen, morphologische und syntaktische Hinweise zu erfassen, die in kurzen Phrasen nicht sichtbar sind. "
             "Dieser Text enthält Fachbegriffe aus dem Bereich Datenverarbeitung sowie alltägliche Ausdrücke.",
@@ -134,7 +134,7 @@ def load_sample_data():
 
             "Dieser Paragraph kombiniert narrative, erklärende und technische Sätze, um die Vielfalt der natürlichen Sprache in deutschen Texten zu repräsentieren.",
 
-            # Francuski - duži paragrafi
+            # Francuski
             "La détection de la langue est essentielle pour le traitement automatique des langues, en particulier dans des environnements multilingues. "
             "Des exemples de texte plus longs fournissent un contexte grammatical et lexical qui aide à distinguer des langues proches. "
             "Ce passage inclut des termes liés à l'informatique, aux workflows de données et à des expressions courantes.",
@@ -144,7 +144,7 @@ def load_sample_data():
 
             "Les textes plus détaillés permettent de capturer des indices morphologiques, des accords et des constructions syntaxiques caractéristiques du français écrit.",
 
-            # Španski - duži paragrafi
+            # Španski
             "La identificación del idioma es un componente clave en sistemas que procesan contenido multilingüe, como noticias o redes sociales. "
             "Un texto más extenso ofrece mayor contexto léxico y sintáctico, lo que facilita la distinción entre idiomas cercanos. "
             "Este ejemplo incluye descripciones técnicas, oraciones coloquiales y vocabulario de dominio específico.",
@@ -159,11 +159,11 @@ def load_sample_data():
             'english', 'english', 'english', 'english', 'english',
             # Srpski (5)
             'serbian', 'serbian', 'serbian', 'serbian', 'serbian',
-            # German (4)
+            # Nemački (4)
             'german', 'german', 'german', 'german',
-            # French (3)
+            # Francuski (3)
             'french', 'french', 'french',
-            # Spanish (3)
+            # Španski (3)
             'spanish', 'spanish', 'spanish'
         ]
     }
