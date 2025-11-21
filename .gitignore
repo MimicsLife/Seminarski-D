@@ -1,0 +1,89 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Distribution / packaging
+.Python
+build/
+dist/
+downloads/
+eggs/
+.eggs/
+*.egg-info/
+.installed.cfg
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+coverage.xml
+*,cover
+htmlcov/
+.tox/
+.nox/
+.coverage
+.cache
+nosetests.xml
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Secrets
+.secrets/
+.env
+.env.*
+
+# Files created by editors
+*.swp
+*~
+
+# compiled C extensions
+*.so
+
+# C extensions
+build/
+
+# MyPy
+.mypy_cache/
+
+# Poetry
+.poetry/
+
+# wheel
+*.whl
