@@ -39,7 +39,7 @@ class DataProcessor:
                     analyzer='char_wb',  # Radi sa karakterima umesto rečima
                     ngram_range=(2, 4)  # Bigrami, trigrami i quadgrami karaktera
                 )
-            else:  # bow
+            else:  # bag-of-words (BOW)
                 self.vectorizer = CountVectorizer(
                     max_features=max_features,
                     stop_words=None,
@@ -49,7 +49,7 @@ class DataProcessor:
 
             features = self.vectorizer.fit_transform(texts_clean)
         else:
-            # transform using already-fitted vectorizer
+            # transformacija pomoću već istreniranog vektorizatora
             features = self.vectorizer.transform(texts_clean)
 
         return features
@@ -69,7 +69,7 @@ class DataProcessor:
 
             features = pad_sequences(sequences, maxlen=self.max_sequence_length, padding='post')
         else:
-            # transform using existing tokenizer and max_sequence_length
+            # transformacija pomoću postojećeg tokenizera i vrednosti `max_sequence_length`
             sequences = self.tokenizer.texts_to_sequences(texts_clean)
             features = pad_sequences(sequences, maxlen=self.max_sequence_length, padding='post')
 
@@ -155,9 +155,9 @@ def load_sample_data():
             "En conjunto, los pasajes largos aumentan la probabilidad de que aparezcan entidades y colocaciones informativas que mejoren la capacidad de los modelos para generalizar."
         ],
         'language': [
-            # English (5)
+            # Engleski (5)
             'english', 'english', 'english', 'english', 'english',
-            # Serbian (5)
+            # Srpski (5)
             'serbian', 'serbian', 'serbian', 'serbian', 'serbian',
             # German (4)
             'german', 'german', 'german', 'german',

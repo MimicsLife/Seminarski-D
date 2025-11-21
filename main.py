@@ -186,24 +186,24 @@ def main():
     print("-" * 40)
     
     test_texts = [
-        # English - longer test paragraph
+        # Engleski - duži test primer
         "Language detection models work better when provided with sentences that include a range of vocabulary and sentence structures. "
         "This example paragraph mentions data processing, model evaluation, and visualization so the classifier sees diverse lexical cues across multiple sentences. "
         "It is intended to represent a typical excerpt from a technical blog or article.",
 
-        # Serbian - longer test paragraph
+        # Srpski - duži test primer
         "Ovaj duži primer teksta na srpskom sadrži nekoliko rečenica koje opisuju proces obrade podataka i primenu modela u praksi. "
         "U tekstu se pominju alati, koraci preprocesiranja i kratki primeri upotrebe, čime se pruža bogatiji kontekst za detekciju jezika.",
 
-        # German - longer test paragraph
+        # Nemački - duži test primer
         "Dieses längere Beispiel erklärt Konzepte aus dem Bereich Datenanalyse und maschinelles Lernen in mehreren Sätzen, um dem Klassifikator mehr Kontext zu geben. "
         "Es enthält Fachbegriffe, erläuternde Nebensätze und gebräuchliche Ausdrücke.",
 
-        # French - longer test paragraph
+        # Francuski - duži test primer
         "Ce passage en français décrit de manière concise des étapes typiques d'un projet de science des données, incluant la préparation des données, l'entraînement d'un modèle et l'interprétation des résultats. "
         "La variété lexicale et syntaxique aide à l'identification correcte de la langue.",
 
-        # Spanish - longer test paragraph
+        # Španski - duži test primer
         "Este texto en español presenta varias oraciones que comentan sobre técnicas de análisis de datos, la evaluación de modelos y la presentación de resultados. "
         "Incluye términos técnicos y frases coloquiales para ofrecer un contexto más amplio al clasificador."
     ]
@@ -216,7 +216,7 @@ def main():
     print("-" * 50)
     
     for i, text in enumerate(test_texts):
-        # Tradicionalni model (transform using fitted vectorizer)
+        # Tradicionalni model (transformacija pomoću već istreniranog vektorizatora)
         text_features = processor.prepare_traditional_features([text], fit=False)
         trad_pred = best_traditional.predict(text_features)[0]
         trad_lang = processor.decode_labels([trad_pred])[0]
