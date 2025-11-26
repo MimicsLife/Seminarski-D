@@ -11,6 +11,9 @@ Ovaj projekat je jednostavan demo za prepoznavanje jezika teksta i komparativnu 
 Aktivirajte virtuelno okruženje i instalirajte zavisnosti iz `requirements.txt`:
 
 ```powershell
+#Kreiranje Python virtuelnog okruženja
+ python -m venv .venv
+
 # Aktivacija venv (PowerShell)
 {YourPath}/Seminarski-D-main/.venv/Scripts/Activate.ps1
 
