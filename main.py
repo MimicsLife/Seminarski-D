@@ -205,12 +205,12 @@ def main():
 
         # Španski - duži test primer
         "Este texto en español presenta varias oraciones que comentan sobre técnicas de análisis de datos, la evaluación de modelos y la presentación de resultados. "
-        "Incluye términos técnicos y frases coloquiales para ofrecer un contexto más amplio al clasificador."
-        ,
+        "Incluye términos técnicos y frases coloquiales para ofrecer un contexto más amplio al clasificador.",
+        
         # Hrvatski - duži test primer
         "Ovaj tekst na hrvatskom sadrži nekoliko rečenica o obradi podataka, modeliranju i evaluaciji. "
-    "Sadrži tehničke termine i primjere upotrebe koji pomažu modelu u prepoznavanju karakterističnih leksičkih obrazaca. "
-    "Namijenjen je kao reprezentativan uzorak za testiranje prepoznavanja jezika.",
+        "Sadrži tehničke termine i primjere upotrebe koji pomažu modelu u prepoznavanju karakterističnih leksičkih obrazaca. "
+        "Namijenjen je kao reprezentativan uzorak za testiranje prepoznavanja jezika.",
 
         # Bosanski - duži test primer
         "Ovaj primjer teksta na bosanskom opisuje korake u pripremi podataka i treniranju modela za klasifikaciju. "
