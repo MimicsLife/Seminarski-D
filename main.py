@@ -181,8 +181,8 @@ def main():
     plt.tight_layout()
     plt.show()
     
-    # 5. TESTIRANJE NA NOVIM PRIMERIMA
-    print("\n5. TESTIRANJE NA NOVIM PRIMERIMA")
+    # 5. TESTIRANJE NA PRIMERIMA
+    print("\n5. TESTIRANJE NA PRIMERIMA")
     print("-" * 40)
     
     test_texts = [
@@ -206,6 +206,16 @@ def main():
         # Španski - duži test primer
         "Este texto en español presenta varias oraciones que comentan sobre técnicas de análisis de datos, la evaluación de modelos y la presentación de resultados. "
         "Incluye términos técnicos y frases coloquiales para ofrecer un contexto más amplio al clasificador."
+        ,
+        # Hrvatski - duži test primer
+        "Ovaj tekst na hrvatskom sadrži nekoliko rečenica o obradi podataka, modeliranju i evaluaciji. "
+    "Sadrži tehničke termine i primjere upotrebe koji pomažu modelu u prepoznavanju karakterističnih leksičkih obrazaca. "
+    "Namijenjen je kao reprezentativan uzorak za testiranje prepoznavanja jezika.",
+
+        # Bosanski - duži test primer
+        "Ovaj primjer teksta na bosanskom opisuje korake u pripremi podataka i treniranju modela za klasifikaciju. "
+        "Sadrži mješavinu formalnog i neformalnog jezika, tehničke izraze i uobičajene fraze kako bi se model testirao u realnim scenarijima. "
+        "Cilj je obezbijediti dovoljan kontekst za pouzdano prepoznavanje jezika.",
     ]
     
     # Koristimo najbolji tradicionalni i najbolji neuronski model

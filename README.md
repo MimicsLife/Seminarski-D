@@ -12,17 +12,17 @@ Aktivirajte virtuelno okruženje i instalirajte zavisnosti iz `requirements.txt`
 
 ```powershell
 # Aktivacija venv (PowerShell)
-{YourPath}/language_detection/.venv/Scripts/Activate.ps1
+{YourPath}/Seminarski-D-main/.venv/Scripts/Activate.ps1
 
 # Instalacija
-{YourPath}/language_detection/.venv/Scripts/python.exe -m pip install -r requirements.txt
+{YourPath}/Seminarski-D-main/.venv/Scripts/python.exe -m pip install -r requirements.txt
 ```
 
 Napomena: `tensorflow` je velik paket i preuzimanje/instalacija može potrajati.
 
 **Kako pokrenuti projekat**
 ```powershell
-{YourPath}/language_detection/.venv/Scripts/python.exe main.py
+{YourPath}/Seminarski-D-main/.venv/Scripts/python.exe main.py
 ```
 
 **Šta očekivati**
