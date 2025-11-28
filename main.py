@@ -67,14 +67,23 @@ def main():
         X_train_traditional, y_train, X_test_traditional, y_test
     )
     
+    # print("\nEvaluacija Logistic Regression modela:")
+    # evaluate_model(lr_model, X_test_traditional, y_test, 'traditional')
+
     rf_model, rf_acc = traditional_models.train_random_forest(
         X_train_traditional, y_train, X_test_traditional, y_test
     )
     
+    #print("\nEvaluacija Random Forest modela:")
+    #evaluate_model(rf_model, X_test_traditional, y_test, 'traditional')
+
     svm_model, svm_acc = traditional_models.train_svm(
         X_train_traditional, y_train, X_test_traditional, y_test
     )
     
+    #print("\nEvaluacija SVM modela:")
+    #evaluate_model(svm_model, X_test_traditional, y_test, 'traditional')
+
     traditional_models.compare_models()
     
     # 3. NEURONSKE MREŽE
@@ -111,18 +120,27 @@ def main():
         epochs=30
     )
     
+    #print("\nEvaluacija CNN modela na test podacima:")
+    #evaluate_model(cnn_model, X_test_neural_features, y_test_categorical, 'neural')
+
     lstm_model, lstm_history = neural_models.train_lstm(
         X_train_neural_features, y_train_categorical,
         X_val_neural_features, y_val_categorical,
         epochs=30
     )
-    
+
+    #print("\nEvaluacija LSTM modela na test podacima:")
+    #evaluate_model(lstm_model, X_test_neural_features, y_test_categorical, 'neural')
+
     dense_model, dense_history = neural_models.train_dense(
         X_train_neural_features, y_train_categorical,
         X_val_neural_features, y_val_categorical,
         epochs=30
     )
     
+    #print("\nEvaluacija Dense modela na test podacima:")
+    #evaluate_model(dense_model, X_test_neural_features, y_test_categorical, 'neural')
+
     neural_models.compare_models()
     
     # 4. KOMPARATIVNA ANALIZA
@@ -138,6 +156,16 @@ def main():
         'LSTM': neural_models.models['lstm']['accuracy'],
         'Dense NN': neural_models.models['dense']['accuracy']
     }
+
+    #print(f"\nEvaluacija najboljeg tradicionalnog modela:")
+    #best_trad_name = [k for k, v in traditional_models.models.items() if v['accuracy'] == traditional_models.best_score][0]
+    #print(f"Model: {best_trad_name.replace('_', ' ').title()}")
+    #evaluate_model(traditional_models.best_model, X_test_traditional, y_test, 'traditional')
+ 
+    #print(f"\nEvaluacija najboljeg neuronskog modela:")
+    #best_neural_name = [k for k, v in neural_models.models.items() if v['accuracy'] == neural_models.best_score][0]
+    #print(f"Model: {best_neural_name.upper()}")
+    #evaluate_model(neural_models.best_model, X_test_neural_features, y_test_categorical, 'neural')
     
     # Prikaz rezultata
     print("\n" + "="*50)

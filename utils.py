@@ -371,7 +371,6 @@ def evaluate_model(model, X_test, y_test, model_type):
     """Evaluacija modela i prikaz metrika"""
     from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
     import matplotlib.pyplot as plt
-    import seaborn as sns
     
     y_pred = model.predict(X_test)
     
@@ -389,11 +388,21 @@ def evaluate_model(model, X_test, y_test, model_type):
     print(f"\nDetaljni izveštaj:")
     print(classification_report(y_test, y_pred))
     
-    # Konfuzione matrice
+
     cm = confusion_matrix(y_test, y_pred)
     plt.figure(figsize=(8, 6))
-    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues')
+    
+    im = plt.imshow(cm, interpolation='nearest', cmap='Blues')
     plt.title(f'Konfuziona matrica - {model_type} model')
+    plt.colorbar(im)
+    
+    # Dodaj brojeve u ćelije
+    for i in range(cm.shape[0]):
+        for j in range(cm.shape[1]):
+            plt.text(j, i, str(cm[i, j]), 
+                    horizontalalignment="center",
+                    color="white" if cm[i, j] > cm.max() / 2 else "black")
+    
     plt.ylabel('Stvarna vrednost')
     plt.xlabel('Predviđena vrednost')
     plt.show()

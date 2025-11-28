@@ -19,7 +19,7 @@ class TraditionalModels:
         """Trenira Logistic Regression model"""
         print("Treniranje Logistic Regression modela...")
         model = LogisticRegression(
-            random_state=42,
+            random_state=0,
             max_iter=1000,
             multi_class='multinomial',
             solver='lbfgs'
@@ -46,7 +46,7 @@ class TraditionalModels:
         print("Treniranje Random Forest modela...")
         model = RandomForestClassifier(
             n_estimators=100,
-            random_state=42,
+            random_state=0,
             max_depth=10
         )
         model.fit(X_train, y_train)
@@ -71,7 +71,7 @@ class TraditionalModels:
         print("Treniranje SVM modela...")
         model = SVC(
             kernel='linear',
-            random_state=42,
+            random_state=0,
             probability=True
         )
         model.fit(X_train, y_train)
@@ -171,7 +171,7 @@ class NeuralNetworkModels:
         
         return model
     
-    def train_cnn(self, X_train, y_train, X_val, y_val, epochs=20, batch_size=32):
+    def train_cnn(self, X_train, y_train, X_val, y_val, epochs, batch_size=32):
         """Trenira CNN model"""
         print("Treniranje CNN modela...")
         model = self.build_cnn_model()
@@ -199,7 +199,7 @@ class NeuralNetworkModels:
         print(f"CNN validation tačnost: {val_accuracy:.4f}")
         return model, history
     
-    def train_lstm(self, X_train, y_train, X_val, y_val, epochs=20, batch_size=32):
+    def train_lstm(self, X_train, y_train, X_val, y_val, epochs, batch_size=32):
         """Trenira LSTM model"""
         print("Treniranje LSTM modela...")
         model = self.build_lstm_model()
@@ -227,7 +227,7 @@ class NeuralNetworkModels:
         print(f"LSTM validation tačnost: {val_accuracy:.4f}")
         return model, history
     
-    def train_dense(self, X_train, y_train, X_val, y_val, epochs=20, batch_size=32):
+    def train_dense(self, X_train, y_train, X_val, y_val, epochs, batch_size=32):
         """Trenira Dense model"""
         print("Treniranje Dense modela...")
         model = self.build_dense_model()
